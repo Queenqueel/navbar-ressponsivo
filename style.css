@@ -130,4 +130,10 @@ header {
     .open {
         display: block;
     }
+
+    .logo img {
+        width: 180px;
+        height: 60px;
+        transition: 1s;
+    }
 }
