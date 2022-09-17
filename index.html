@@ -6,17 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Menu</title>
+    <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo-raquel2.png">
-            </div>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo-raquel2.png">
+                </div>
 
-            <div class="nav-list">
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="login-button">
+                    <button href="#" onclick="loginToggle()">Entrar</button>
+                    <button href="#" onclick="signupToggle()">Cadastre-se</button>
+                </div>
+
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()">
+                        <img class="icon" src="img/menu_white_36dp.svg">
+                    </button>
+                </div>
+            </nav>
+
+            <div class="mobile-menu">
                 <ul>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Início</a>
@@ -28,41 +55,47 @@
                         <a href="#" class="nav-link">Sobre</a>
                     </li>
                 </ul>
-            </div>
 
-            <div class="login-button">
-                <button>
-                    <a href="#">Entrar</a>
-                </button>
+                <div class="login-button">
+                    <button href="#" onclick="loginToggle()">Entrar</button>
+                    <button href="#" onclick="signupToggle()">Cadastre-se</button>
+                </div>
             </div>
+        </header>
+    </div>
 
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()">
-                    <img class="icon" src="img/menu_white_36dp.svg">
-                </button>
+    <div class="signup-form">
+        <div class="form">
+            <div class="close" onclick="signupToggle()">&times;</div>
+            <div class="text">
+                <h1>Registre-se</h1>
             </div>
-        </nav>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Sobre</a>
-                </li>
-            </ul>
-
-            <div class="login-button">
-                <button>
-                    <a href="#">Entrar</a>
-                </button>
-            </div>
+            <form action="#">
+                <div class="row">
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Sobrenome">
+                </div>
+                <input class="input" type="email" placeholder="Email">
+                <input class="input" type="password" placeholder="Senha">
+                <input class="input" type="password" placeholder="Confirme a senha">
+                <input class="submit" type="submit" value="Cadastrar">
+            </form>
         </div>
-    </header>
+    </div>
+    <div class="login-form">
+        <div class="form">
+            <div class="close" onclick="loginToggle()">&times;</div>
+            <div class="text">
+                <h1>Entrar</h1>
+            </div>
+            <form action="#">
+                <input class="input" type="email" placeholder="Email">
+                <input class="input" type="password" placeholder="Senha">
+                <input class="submit" type="submit" value="Entrar">
+            </form>
+        </div>
+    </div>
+
 
     <script src="script.js" defer></script>
 </body>
